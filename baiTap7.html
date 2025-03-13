@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  body{
+    font-family: Arial;
+    height: 500px;
+    width: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+      background-color: lightgray;
+  }
+  input{
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+
+  }
+  button{
+    width: 70px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: coral;
+
+  }
+
+  .div1 > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+      padding:10px;
+  }
+  .div1{
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      width: 500px;
+      height: 500px;
+      background-color: orange;
+      gap: 50px;
+      align-content: center;
+      border-radius: 10px;
+      align-self: center;
+  }
+</style>
+<body>
+<div class="div1">
+<div><label>số phút gọi</label>
+    <input type="text" id="minutes"></div>
+  <div><label>Số giây gọi</label>
+    <input type="text" id="seconds"></div>
+  <div><button onclick="myFunction()">Tính</button></div>
+  <div><p id="hienThi"></p></div>
+</div>
+<script>
+  function myFunction() {
+    let minutes = parseInt(document.getElementById("minutes").value);
+    let seconds = parseInt(document.getElementById("seconds").value);
+    a = ((minutes * 60)+seconds)*45;
+    document.getElementById("hienThi").innerHTML = "Cước điện thoại là: "+a;
+  }
+</script>
+</body>
+</html>

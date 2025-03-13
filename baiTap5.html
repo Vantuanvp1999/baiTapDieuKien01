@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  let a = parseInt(prompt("Nhập điểm bài kiểm tra!"));
+  let b = parseInt(prompt("Nhập điểm bài thi giữa kỳ!"));
+  let c = parseInt(prompt("Nhập điểm bài thi cuối kỳ!"));
+  let d = (a + b + c) / 3;
+  if (d >= 8) {
+    alert("diểm trung bình là: "+d+ ". Học lực giỏi!");
+  } else if (d <= 8 && d >= 6.5) {
+    alert("diểm trung bình là: "+d+ ". Học lực khá!");
+  }else if (d <= 6.5 && d >= 4) {
+    alert("diểm trung bình là: "+d+ ". Học lực trung bình!");
+  }else {
+    alert("diểm trung bình là: "+d+ ". Học lực yếu");
+  }
+</script>
 </body>
 </html>
